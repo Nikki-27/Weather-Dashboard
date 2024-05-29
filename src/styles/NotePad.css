@@ -1,0 +1,42 @@
+.notepad {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.notepad input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.notepad button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notepad button:hover {
+    background-color: #0056b3;
+}
+
+.notepad ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notepad li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
