@@ -5,8 +5,6 @@ import WeatherChart from './Components/WeatherChart';
 import NotePad from './Components/NotePad';
 import './App.css';
 
-const API_key = '180409716dc3489cbb4163830242605';
-
 const App = () => {
     const [weatherData, setWeatherData] = useState({
         avgTemp: null,
@@ -20,7 +18,7 @@ const App = () => {
     useEffect(() => {
         const fetchWeatherData = async (lat, lon) => {
             try {
-                const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_key}&q=${lat},${lon}&days=7`);
+                const response = await axios.get(`/api/weather?lat=${lat}&lon=${lon}`);
                 const data = response.data;
                 console.log("API data", data);
 
@@ -43,7 +41,7 @@ const App = () => {
                     name: `${data.location.name}, ${data.location.region}, ${data.location.country}`,
                 }));
             } catch (error) {
-                console.error('Error fetching weather data', error);
+                console.error('Error fetching weather data:', error);
             }
         };
 
