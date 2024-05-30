@@ -20,7 +20,7 @@ const App = () => {
     useEffect(() => {
         const fetchWeatherData = async (lat, lon) => {
             try {
-                const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_API_KEY}&q=${lat},${lon}&days=7`);
+                const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_API_KEY}&q=${lat},${lon}&days=7`);
                 const data = response.data;
                 console.log("API data", data);
 
